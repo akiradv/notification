@@ -20,19 +20,11 @@ Um projeto simples de notificações customizadas que aparecem no canto inferior
 
 ## 📦 Como Usar
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/notification.git
-   ```
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd notification
-   ```
-3. Abra o arquivo `index.html` no seu navegador preferido.
+Acesse o projeto diretamente através do seguinte link: [Notificações Customizadas](https://akiradv.github.io/notification)
 
 ## 📷 Capturas de Tela
 
-![Exemplo de Notificação](https://via.placeholder.com/800x400.png?text=Exemplo+de+Notificação)
+![Exemplo de Notificação](images/image.png)
 
 ## 🤝 Contribuições
 
