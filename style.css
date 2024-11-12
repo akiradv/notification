@@ -32,6 +32,9 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: #fff;
     margin-bottom: 10px; /* Espaço entre notificações */
+    position: relative; /* Para posicionar a barra de progresso */
+    cursor: pointer; /* Indica que a notificação é clicável */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .notification.urgent {
@@ -40,10 +43,26 @@ button:hover {
 
 .notification.success {
     background-color: #2ecc71; /* Verde para Sucesso */
+    color: #000; /* Texto preto para melhor contraste */
 }
 
 .notification.error {
     background-color: #e74c3c; /* Vermelho para Erro */
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: #fff;
+    width: 100%;
+    animation: progress 3s linear forwards;
+}
+
+@keyframes progress {
+    from { width: 100%; }
+    to { width: 0; }
 }
 
 #notificationsContainer {

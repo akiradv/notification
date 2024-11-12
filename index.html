@@ -31,11 +31,24 @@
             const notification = document.createElement('div');
             notification.className = 'notification ' + type;
             notification.textContent = message;
+
+            const progressBar = document.createElement('div');
+            progressBar.className = 'progress-bar';
+            notification.appendChild(progressBar);
+
+            notification.onclick = () => {
+                notification.style.transform = 'translateY(-100%)';
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    notification.remove();
+                }, 300); // Tempo para a animação de subida
+            };
+
             document.getElementById('notificationsContainer').appendChild(notification);
 
             setTimeout(() => {
                 notification.remove();
-            }, 3000); // A notificação desaparece após 3 segundos
+            }, cooldownTime); // A notificação desaparece após 3 segundos
         }
     </script>
 </body>
