@@ -67,7 +67,7 @@ button:hover {
 
 #notificationsContainer {
     position: fixed;
-    bottom: 20px;
+    bottom: 60px; /* Aumenta a distância do rodapé */
     right: 20px;
     display: flex;
     flex-direction: column;
