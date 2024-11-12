@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações Customizadas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="urgentBtn" onclick="handleButtonClick('Notificação Urgente', 'urgent', this)">Botão Urgente</button>
+    <button id="successBtn" onclick="handleButtonClick('Notificação de Sucesso', 'success', this)">Botão Sucesso</button>
+    <button id="errorBtn" onclick="handleButtonClick('Notificação de Erro', 'error', this)">Botão Erro</button>
+
+    <div id="notificationsContainer"></div>
+
+    <script>
+        const cooldownTime = 3000; // 3 segundos de cooldown
+
+        function handleButtonClick(message, type, button) {
+            if (button.disabled) return;
+
+            showNotification(message, type);
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.disabled = false;
+            }, cooldownTime);
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = 'notification ' + type;
+            notification.textContent = message;
+            document.getElementById('notificationsContainer').appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000); // A notificação desaparece após 3 segundos
+        }
+    </script>
+</body>
+</html>

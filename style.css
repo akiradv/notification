@@ -1,0 +1,56 @@
+body {
+    background-color: #1a1a1a;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.notification {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    margin-bottom: 10px; /* Espaço entre notificações */
+}
+
+.notification.urgent {
+    background-color: #e74c3c; /* Vermelho para Urgente */
+}
+
+.notification.success {
+    background-color: #2ecc71; /* Verde para Sucesso */
+}
+
+.notification.error {
+    background-color: #e74c3c; /* Vermelho para Erro */
+}
+
+#notificationsContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha as notificações à direita */
+}
